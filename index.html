@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fayaz — Backend Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo" onclick="showPage('portfolio')">fayaz.dev</span>
+  <ul class="nav-links">
+    <li><a onclick="showPage('portfolio');setTimeout(()=>document.getElementById('skills').scrollIntoView({behavior:'smooth'}),50)">Skills</a></li>
+    <li><a onclick="showPage('portfolio');setTimeout(()=>document.getElementById('experience').scrollIntoView({behavior:'smooth'}),50)">Experience</a></li>
+    <li><a onclick="showPage('portfolio');setTimeout(()=>document.getElementById('projects').scrollIntoView({behavior:'smooth'}),50)">Projects</a></li>
+    <li><a onclick="showPage('blog')">Writing</a></li>
+    <li><a onclick="showPage('portfolio');setTimeout(()=>document.getElementById('contact-section').scrollIntoView({behavior:'smooth'}),50)">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PORTFOLIO PAGE -->
+<div id="page-portfolio" class="page active">
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Available for new roles</div>
+      <h1 class="hero-h1">Mohammed<br><span>Fayaz</span><br>Ismail</h1>
+      <p class="hero-desc">Backend Engineer building scalable, production-ready systems with NestJS, Node.js, and TypeScript. I write code that's clean, tested, and built to hold up under real-world load.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="showPage('blog')">View Writing <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="btn-outline" onclick="showPage('portfolio');setTimeout(()=>document.getElementById('contact-section').scrollIntoView({behavior:'smooth'}),50)">Get in Touch</button>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">1<span>+</span></div><div class="stat-label">Years experience</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Live projects</div></div>
+      <div class="stat"><div class="stat-num">10<span>+</span></div><div class="stat-label">Technologies</div></div>
+    </div>
+  </section>
+
+  <section class="port-section" id="skills">
+    <div class="section-label"><span class="num">01</span> Skills & Stack</div>
+    <div class="skills-grid reveal">
+      <div class="skill-group"><div class="skill-group-title">Backend</div><div class="skill-tags"><span class="skill-tag">NestJS</span><span class="skill-tag">Node.js</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Ruby on Rails</span><span class="skill-tag">REST APIs</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">Frontend</div><div class="skill-tags"><span class="skill-tag">Next.js</span><span class="skill-tag">React</span><span class="skill-tag">JavaScript ES6+</span><span class="skill-tag">Tailwind CSS</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">Data & Auth</div><div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Drizzle ORM</span><span class="skill-tag">MySQL</span><span class="skill-tag">JWT</span><span class="skill-tag">Google OAuth</span><span class="skill-tag">Firebase OTP</span></div></div>
+      <div class="skill-group"><div class="skill-group-title">Cloud & DevOps</div><div class="skill-tags"><span class="skill-tag">AWS EC2</span><span class="skill-tag">NGINX</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span><span class="skill-tag">TDD / RSpec</span></div></div>
+    </div>
+  </section>
+
+  <section class="port-section" id="experience">
+    <div class="section-label"><span class="num">02</span> Experience</div>
+    <div class="exp-list">
+      <div class="exp-item reveal">
+        <div class="exp-meta"><div class="exp-company">Metaonus Pvt Ltd</div><div class="exp-period">2025 — Present</div></div>
+        <div>
+          <div class="exp-role">Software Engineer</div>
+          <p class="exp-desc">Architecting modular backend services for a live EdTech platform — designing REST APIs, secure authentication flows (JWT, OTP, OAuth), and role-based access control. Managing cloud infrastructure on AWS EC2 with NGINX, working across the stack with Next.js and PostgreSQL + Drizzle ORM.</p>
+          <div class="exp-tags"><span class="exp-tag">NestJS</span><span class="exp-tag">TypeScript</span><span class="exp-tag">Next.js</span><span class="exp-tag">PostgreSQL</span><span class="exp-tag">AWS EC2</span><span class="exp-tag">RBAC</span></div>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-meta"><div class="exp-company">Brototype</div><div class="exp-period">2024 — 2025</div></div>
+        <div>
+          <div class="exp-role">Ruby on Rails Intern</div>
+          <p class="exp-desc">Built full-stack applications from scratch including an e-commerce platform and real-time blogging app using Rails 8, Hotwire, and Turbo Streams. Achieved 80%+ test coverage with RSpec TDD. Deployed on AWS EC2 with zero-downtime NGINX configuration.</p>
+          <div class="exp-tags"><span class="exp-tag">Ruby on Rails</span><span class="exp-tag">Hotwire</span><span class="exp-tag">PostgreSQL</span><span class="exp-tag">RSpec</span><span class="exp-tag">AWS EC2</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="port-section" id="projects">
+    <div class="section-label"><span class="num">03</span> Projects</div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-num">// 01</div>
+        <div class="project-title">Euphoria E-commerce Platform</div>
+        <p class="project-desc">Full-stack e-commerce site with Ruby on Rails and PostgreSQL. CRUD, dynamic UI with AJAX + Hotwire, Google OAuth, and Razorpay payment integration including COD and wallet flows.</p>
+        <div class="project-stack"><span class="project-tech">Ruby on Rails</span><span class="project-tech">Hotwire</span><span class="project-tech">PostgreSQL</span><span class="project-tech">Razorpay</span><span class="project-tech">RSpec</span></div>
+        <span class="project-link">View Project <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">// 02</div>
+        <div class="project-title">Menuor — Digital Menu</div>
+        <p class="project-desc">Responsive admin dashboard for restaurant menu management built with React.js and Tailwind CSS. Full CRUD, RBAC for admins and staff, REST API integration via Axios.</p>
+        <div class="project-stack"><span class="project-tech">React.js</span><span class="project-tech">Tailwind CSS</span><span class="project-tech">Axios</span><span class="project-tech">REST APIs</span><span class="project-tech">RBAC</span></div>
+        <span class="project-link">View Project <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="port-section" id="contact-section">
+    <div class="section-label"><span class="num">04</span> Contact</div>
+    <div class="contact-inner reveal">
+      <h2 class="contact-heading">Let's build<br>something<br><span>robust.</span></h2>
+      <p class="contact-sub">Open to Backend and Full-Stack roles. If you're building something that needs to scale, let's talk.</p>
+      <div class="contact-links">
+        <a href="mailto:fayazpk18@gmail.com" class="contact-link"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="3" width="12" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M1 4l6 4 6-4" stroke="currentColor" stroke-width="1.2"/></svg>fayazpk18@gmail.com</a>
+        <a href="https://linkedin.com" target="_blank" class="contact-link"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6v4M4 4.5v.01M7 10V7.5c0-.83.67-1.5 1.5-1.5S10 6.67 10 7.5V10M7 6v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>LinkedIn</a>
+        <a href="https://github.com" target="_blank" class="contact-link"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5a5.5 5.5 0 00-1.74 10.72c.28.05.38-.12.38-.26v-.93c-1.53.33-1.85-.74-1.85-.74-.25-.64-.61-.81-.61-.81-.5-.34.04-.33.04-.33.55.04.84.57.84.57.49.84 1.28.6 1.59.46.05-.36.19-.6.35-.74-1.22-.14-2.5-.61-2.5-2.72 0-.6.21-1.09.57-1.48-.06-.14-.25-.7.05-1.46 0 0 .47-.15 1.53.57a5.3 5.3 0 012.8 0c1.06-.72 1.52-.57 1.52-.57.3.76.11 1.32.05 1.46.36.39.57.88.57 1.48 0 2.12-1.29 2.58-2.51 2.72.2.17.37.51.37 1.02v1.52c0 .14.1.32.38.26A5.5 5.5 0 007 1.5z" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>GitHub</a>
+        <a href="tel:+917560898276" class="contact-link"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 2.5C2 8.3 5.7 12 11.5 12l.5-2.5-2.5-.5-.5 1C7.5 9.5 4.5 6.5 4 5l1-.5L4.5 2H2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>+91 75608 98276</a>
+      </div>
+    </div>
+  </section>
+  <footer><p>© 2025 Mohammed Fayaz Ismail P K</p><p>Built with precision · Kerala, India</p></footer>
+</div>
+
+<!-- BLOG LIST PAGE -->
+<div id="page-blog" class="page">
+  <div class="blog-page-wrap">
+    <button class="back-btn" onclick="showPage('portfolio')">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 6H2M6 2L2 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Portfolio
+    </button>
+    <div class="blog-page-title">Writing &<br><span>Thinking</span></div>
+    <p class="blog-page-sub">Technical articles on backend architecture, DevOps, and the tools I build and use in production.</p>
+    <div class="blog-divider"></div>
+    <div>
+      <div class="blog-card" onclick="showPage('article1')">
+        <div>
+          <div class="blog-card-tag">Algorithmic Trading</div>
+          <div class="blog-card-title">Building OpenClaw: Automated Trading with OpenAlgo and a Custom API Layer</div>
+          <p class="blog-card-excerpt">How I built OpenClaw — a personal automated trading system that connects to OpenAlgo's broker bridge, executes strategy signals via a custom REST API, and handles live order routing with minimal latency.</p>
+          <div class="blog-card-meta">
+            <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><rect x="1" y="2" width="9" height="8" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1 5h9M4 1v2M7 1v2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>March 2025</span>
+            <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 3v2.5l1.5 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>8 min read</span>
+          </div>
+        </div>
+        <div class="blog-card-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+      <div class="blog-card" onclick="showPage('article2')">
+        <div>
+          <div class="blog-card-tag">DevOps</div>
+          <div class="blog-card-title">Docker to Kubernetes: A Backend Engineer's Practical Migration Guide</div>
+          <p class="blog-card-excerpt">A ground-up walkthrough of containerizing a NestJS application with Docker, then migrating it to Kubernetes — covering pods, services, deployments, and why orchestration matters at scale.</p>
+          <div class="blog-card-meta">
+            <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><rect x="1" y="2" width="9" height="8" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1 5h9M4 1v2M7 1v2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>February 2025</span>
+            <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 3v2.5l1.5 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>10 min read</span>
+          </div>
+        </div>
+        <div class="blog-card-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 1: OPENCLAW -->
+<div id="page-article1" class="page">
+  <div class="article-wrap">
+    <button class="back-btn" onclick="showPage('blog')">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 6H2M6 2L2 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Writing
+    </button>
+    <div class="article-tag-line">Algorithmic Trading</div>
+    <h1 class="article-title">Building OpenClaw: Automated Trading with OpenAlgo and a Custom API Layer</h1>
+    <div class="article-meta">
+      <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><rect x="1" y="2" width="9" height="8" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1 5h9M4 1v2M7 1v2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>March 2025</span>
+      <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 3v2.5l1.5 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>8 min read</span>
+      <span>Mohammed Fayaz</span>
+    </div>
+    <div class="article-body">
+      <p>Algorithmic trading has always fascinated me — not just for the finance side, but for the engineering challenge. Getting low-latency systems to talk to broker APIs reliably, handling webhook signals without dropping orders, and building something that runs unattended while you sleep. That's the kind of problem that forces you to care about every layer of your stack.</p>
+      <p>OpenClaw is a project I built to scratch that itch. It sits between trading strategy signals and live broker execution, using <strong>OpenAlgo</strong> as the broker bridge and a custom REST API layer I built in Node.js to handle signal routing, validation, and order lifecycle management.</p>
+
+      <h2>What is OpenAlgo?</h2>
+      <p>OpenAlgo is an open-source algorithmic trading framework that acts as a unified broker bridge. It abstracts away broker-specific APIs (Zerodha, Fyers, Angel One, etc.) and exposes a clean, consistent REST interface you can call from any strategy — TradingView, Python, or your own backend.</p>
+      <div class="callout"><p><strong>Why not call the broker API directly?</strong> Broker APIs differ wildly — different auth flows, rate limits, error codes, and WebSocket formats. OpenAlgo normalizes all of that. It also handles session management and token refresh, which is a non-trivial problem in live trading.</p></div>
+
+      <h2>The Architecture of OpenClaw</h2>
+      <p>OpenClaw adds an intelligent routing layer on top of OpenAlgo. Here's the end-to-end flow:</p>
+      <div class="code-block"><div class="code-lang">architecture</div><pre>
+  TradingView Alert  (webhook POST)
+          ↓
+  OpenClaw API  ←── validation, risk checks, signal enrichment
+          ↓
+  OpenAlgo Bridge  ←── broker abstraction, auth, normalization
+          ↓
+  Broker API  (Zerodha / Fyers / Angel One)
+          ↓
+  Exchange  (NSE / BSE)</pre></div>
+
+      <h2>Setting Up the OpenAlgo Connection</h2>
+      <p>OpenAlgo runs locally or on a VPS and exposes endpoints like <code>/api/v1/placeorder</code>. Every request needs an API key generated from the OpenAlgo dashboard after linking your broker account.</p>
+      <div class="code-block"><div class="code-lang">javascript</div><pre><span class="cm">// config/openalgo.js</span>
+<span class="kw">const</span> OPENALGO_BASE = <span class="str">'http://127.0.0.1:5000/api/v1'</span>;
+<span class="kw">const</span> API_KEY = process.env.OPENALGO_API_KEY;
+
+<span class="kw">async function</span> <span class="fn">placeOrder</span>(payload) {
+  <span class="kw">const</span> res = <span class="kw">await</span> fetch(`${OPENALGO_BASE}/placeorder`, {
+    method: <span class="str">'POST'</span>,
+    headers: {
+      <span class="str">'Content-Type'</span>: <span class="str">'application/json'</span>,
+      <span class="str">'Authorization'</span>: `Bearer ${API_KEY}`
+    },
+    body: JSON.stringify(payload)
+  });
+  <span class="kw">if</span> (!res.ok) <span class="kw">throw new</span> Error(`OpenAlgo error: ${res.status}`);
+  <span class="kw">return</span> res.json();
+}
+
+module.exports = { placeOrder };</pre></div>
+
+      <h2>Handling TradingView Webhooks</h2>
+      <p>TradingView sends alerts as HTTP POST requests with a JSON body. You define the payload format in the alert message using TradingView's template syntax. A typical signal looks like:</p>
+      <div class="code-block"><div class="code-lang">json</div><pre>{
+  <span class="str">"symbol"</span>: <span class="str">"NIFTY25MARFUT"</span>,
+  <span class="str">"action"</span>: <span class="str">"BUY"</span>,
+  <span class="str">"quantity"</span>: <span class="str">"50"</span>,
+  <span class="str">"order_type"</span>: <span class="str">"MARKET"</span>,
+  <span class="str">"product"</span>: <span class="str">"MIS"</span>,
+  <span class="str">"strategy"</span>: <span class="str">"supertrend_v2"</span>,
+  <span class="str">"secret"</span>: <span class="str">"my-webhook-secret"</span>
+}</pre></div>
+
+      <p>The OpenClaw webhook handler validates the secret, checks the symbol against an allowlist, enforces position sizing rules, then forwards the order:</p>
+      <div class="code-block"><div class="code-lang">javascript</div><pre><span class="cm">// routes/webhook.js</span>
+router.<span class="fn">post</span>(<span class="str">'/signal'</span>, <span class="kw">async</span> (req, res) => {
+  <span class="kw">const</span> { symbol, action, quantity,
+          order_type, product, strategy, secret } = req.body;
+
+  <span class="cm">// 1. Validate webhook secret</span>
+  <span class="kw">if</span> (secret !== process.env.WEBHOOK_SECRET)
+    <span class="kw">return</span> res.status(401).json({ error: <span class="str">'Unauthorized'</span> });
+
+  <span class="cm">// 2. Symbol allowlist check</span>
+  <span class="kw">if</span> (!ALLOWED_SYMBOLS.includes(symbol))
+    <span class="kw">return</span> res.status(400).json({ error: <span class="str">'Symbol not permitted'</span> });
+
+  <span class="cm">// 3. Risk check — max qty per signal</span>
+  <span class="kw">const</span> qty = parseInt(quantity);
+  <span class="kw">if</span> (qty > MAX_QTY_LIMIT)
+    <span class="kw">return</span> res.status(400).json({ error: <span class="str">'Quantity exceeds limit'</span> });
+
+  <span class="cm">// 4. Forward to OpenAlgo</span>
+  <span class="kw">try</span> {
+    <span class="kw">const</span> result = <span class="kw">await</span> <span class="fn">placeOrder</span>({
+      apikey: process.env.OPENALGO_API_KEY,
+      strategy, symbol, action: action.toUpperCase(),
+      exchange: <span class="str">'NFO'</span>, pricetype: order_type, product, quantity: qty
+    });
+    res.json({ success: <span class="kw">true</span>, orderId: result.orderid });
+  } <span class="kw">catch</span> (err) {
+    res.status(500).json({ error: err.message });
+  }
+});</pre></div>
+
+      <h2>MinMax Signal Integration</h2>
+      <p>One of the strategies wired into OpenClaw uses a custom MinMax indicator — it identifies local price minima and maxima over a rolling window and fires signals at potential reversal zones. A scheduled job fetches OHLC data, runs the MinMax calculation, and posts to the OpenClaw webhook if a threshold is crossed.</p>
+      <div class="code-block"><div class="code-lang">javascript</div><pre><span class="cm">// strategies/minmax.js</span>
+<span class="kw">function</span> <span class="fn">detectMinMax</span>(closes, window = 5) {
+  <span class="kw">const</span> last = closes.length - 1;
+  <span class="kw">const</span> slice = closes.slice(last - window, last + 1);
+  <span class="kw">const</span> mid = slice[Math.floor(window / 2)];
+
+  <span class="kw">const</span> isMax = slice.every((v, i) =>
+    i === Math.floor(window / 2) || mid >= v);
+  <span class="kw">const</span> isMin = slice.every((v, i) =>
+    i === Math.floor(window / 2) || mid <= v);
+
+  <span class="kw">if</span> (isMax) <span class="kw">return</span> <span class="str">'SELL'</span>;
+  <span class="kw">if</span> (isMin) <span class="kw">return</span> <span class="str">'BUY'</span>;
+  return null;
+}</pre></div>
+
+      <h2>What I Learned</h2>
+      <ul>
+        <li>Webhook idempotency matters — TradingView can fire duplicate alerts. Always deduplicate by signal ID or timestamp before placing an order.</li>
+        <li>Fail loudly and fast. A silent failure in a trading system is worse than a crash. Log everything, alert immediately.</li>
+        <li>Secrets management is non-negotiable. Broker API keys carry real financial risk — environment variables only, never hardcoded.</li>
+        <li>Rate-limit your own webhook endpoint to prevent runaway strategy bugs from placing hundreds of orders in seconds.</li>
+      </ul>
+      <div class="article-divider"></div>
+      <p>OpenClaw is a personal project — not financial advice, not a production trading product. But it's been one of the most satisfying systems I've built because every bug has real, immediate consequences. Nothing sharpens your error handling instincts like money on the line.</p>
+      <div class="tag-footer">
+        <span class="tag-pill">Node.js</span><span class="tag-pill">OpenAlgo</span><span class="tag-pill">Algorithmic Trading</span><span class="tag-pill">REST APIs</span><span class="tag-pill">Webhooks</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 2: DOCKER + K8S -->
+<div id="page-article2" class="page">
+  <div class="article-wrap">
+    <button class="back-btn" onclick="showPage('blog')">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M10 6H2M6 2L2 6l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Writing
+    </button>
+    <div class="article-tag-line">DevOps</div>
+    <h1 class="article-title">Docker to Kubernetes: A Backend Engineer's Practical Migration Guide</h1>
+    <div class="article-meta">
+      <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><rect x="1" y="2" width="9" height="8" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1 5h9M4 1v2M7 1v2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>February 2025</span>
+      <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.1"/><path d="M5.5 3v2.5l1.5 1" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>10 min read</span>
+      <span>Mohammed Fayaz</span>
+    </div>
+    <div class="article-body">
+      <p>Most backend engineers reach Docker naturally — you containerize your app, write a <code>docker-compose.yml</code>, and life gets better. Reproducible environments, no more "works on my machine," easy local dev setup. Docker is genuinely great for what it does.</p>
+      <p>Then your app grows. You're running multiple services, need zero-downtime deployments, want automatic restarts when a container crashes, and traffic that scales horizontally on load spikes. That's when Docker alone starts to feel limiting — and Kubernetes starts making sense.</p>
+      <p>This is a practical walkthrough of containerizing a NestJS API with Docker, then migrating that setup to Kubernetes. I'll focus on concepts that matter day-to-day, not the full K8s spec.</p>
+
+      <h2>Step 1: Containerize the NestJS App</h2>
+      <p>Start with a clean, production-ready Dockerfile using a multi-stage build — the build stage compiles TypeScript, the runtime stage only ships what's needed to run. This keeps the final image lean.</p>
+      <div class="code-block"><div class="code-lang">dockerfile</div><pre><span class="cm"># Stage 1: Build</span>
+<span class="kw">FROM</span> node:20-alpine <span class="kw">AS</span> builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+<span class="cm"># Stage 2: Runtime</span>
+<span class="kw">FROM</span> node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+COPY package*.json ./
+ENV NODE_ENV=production
+EXPOSE 3000
+CMD [<span class="str">"node"</span>, <span class="str">"dist/main"</span>]</pre></div>
+
+      <h2>Step 2: Docker Compose for Local Dev</h2>
+      <p>A solid <code>docker-compose.yml</code> is your local development environment and a useful reference for everything your app needs to run:</p>
+      <div class="code-block"><div class="code-lang">yaml</div><pre>version: <span class="str">'3.9'</span>
+services:
+  api:
+    build: .
+    ports:
+      - <span class="str">"3000:3000"</span>
+    environment:
+      - DATABASE_URL=postgres://user:pass@db:5432/appdb
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: appdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:</pre></div>
+
+      <h2>Step 3: Understanding What Kubernetes Actually Does</h2>
+      <p>Kubernetes is a container orchestrator. It manages where containers run, restarts them when they crash, balances traffic across instances, and handles rolling deployments. The mental model shift from Docker:</p>
+      <ul>
+        <li>Docker runs containers. K8s decides <em>which node</em> runs them, how many replicas exist, and what happens when one dies.</li>
+        <li>You describe desired state in YAML manifests. K8s continuously reconciles reality to match that desired state.</li>
+        <li>There are no manual <code>docker run</code> commands in production K8s. Everything is declared.</li>
+      </ul>
+      <div class="callout"><p><strong>Core K8s primitives:</strong> <strong>Pod</strong> — smallest unit, wraps one or more containers. <strong>Deployment</strong> — manages a replica set, handles rollouts and rollbacks. <strong>Service</strong> — stable network endpoint that routes traffic to pods. <strong>Secret / ConfigMap</strong> — inject config and credentials without hardcoding them.</p></div>
+
+      <h2>Step 4: The Deployment Manifest</h2>
+      <p>A Deployment tells K8s to run 3 replicas of your container, use a specific image, and restart pods if they become unhealthy — confirmed via a <code>readinessProbe</code>.</p>
+      <div class="code-block"><div class="code-lang">yaml</div><pre>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nestjs-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nestjs-api
+  template:
+    metadata:
+      labels:
+        app: nestjs-api
+    spec:
+      containers:
+        - name: api
+          image: your-registry/nestjs-app:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: app-secrets
+          resources:
+            requests:
+              memory: <span class="str">"128Mi"</span>
+              cpu: <span class="str">"100m"</span>
+            limits:
+              memory: <span class="str">"256Mi"</span>
+              cpu: <span class="str">"500m"</span>
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 5</pre></div>
+
+      <h2>Step 5: Exposing the App with a Service</h2>
+      <p>Pods are ephemeral — they get new IP addresses every restart. A Service gives you a stable DNS name and IP that always routes to healthy pods. For external traffic, use a <code>LoadBalancer</code> type:</p>
+      <div class="code-block"><div class="code-lang">yaml</div><pre>apiVersion: v1
+kind: Service
+metadata:
+  name: nestjs-api-svc
+spec:
+  selector:
+    app: nestjs-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer</pre></div>
+
+      <h2>Step 6: Secrets and Zero-Downtime Deploys</h2>
+      <p>Never put secrets in your image or manifests. Use K8s Secrets, injected as environment variables at runtime:</p>
+      <div class="code-block"><div class="code-lang">bash</div><pre>kubectl create secret generic app-secrets \
+  --from-literal=DATABASE_URL=<span class="str">"postgres://..."</span> \
+  --from-literal=JWT_SECRET=<span class="str">"your-secret"</span></pre></div>
+      <p>A rolling deployment updates pods one at a time, only terminating old ones once new pods pass their readiness check. Update the image tag and apply:</p>
+      <div class="code-block"><div class="code-lang">bash</div><pre>kubectl set image deployment/nestjs-api \
+  api=your-registry/nestjs-app:v2
+
+kubectl rollout status deployment/nestjs-api
+
+<span class="cm"># If something goes wrong:</span>
+kubectl rollout undo deployment/nestjs-api</pre></div>
+
+      <h2>When to Use Kubernetes (and When Not To)</h2>
+      <p>Kubernetes adds real operational overhead. It's worth it when you have multiple services, need horizontal autoscaling, or require zero-downtime deploys with rollback capability. For a single-service app on one server, Docker + NGINX + PM2 is often the right call — I use this on AWS EC2 for smaller deployments and it works well.</p>
+      <p>The mental model I use: if you need to answer "how do I restart this automatically when it crashes and route traffic away from it while it's down" — that's a K8s problem. Everything else is probably fine with Docker Compose.</p>
+      <div class="article-divider"></div>
+      <p>The jump from Docker to Kubernetes feels steep at first because of the YAML volume and new abstractions. But the core loop is simple: write a Deployment, wire up a Service, manage config with Secrets. Everything else is optimization on top of that foundation.</p>
+      <div class="tag-footer">
+        <span class="tag-pill">Docker</span><span class="tag-pill">Kubernetes</span><span class="tag-pill">NestJS</span><span class="tag-pill">DevOps</span><span class="tag-pill">AWS</span><span class="tag-pill">Backend</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
